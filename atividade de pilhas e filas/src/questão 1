@@ -1,0 +1,7 @@
+Um aplicativo de edição de texto que possui a função "Desfazer" (Ctrl+Z) precisa reverter a última ação feita pelo usuário primeiro.  
+Isso significa que a última ação realizada é a primeira a ser removida.  
+
+ R= A estrutura de dados correta é a Pilha, porque ela segue o princípio LIFO o último elemento inserido é o primeiro a sair.
+  
+Se fosse usada uma fila FIFO, o primeiro comando feito seria desfeito antes dos últimos, o que não corresponde ao comportamento real do Ctrl+Z.  
+Por isso, a pilha é a mais adequada para esse caso.

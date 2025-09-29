@@ -1,0 +1,62 @@
+public class Fila {
+    private int[] dados;
+    private int inicio;
+    private int fim;
+    private int tamanho;
+
+    public Fila(int capacidade) {
+        dados = new int[capacidade];
+        inicio = 0;
+        fim = -1;
+        tamanho = 0;
+    }
+
+    public void enqueue(int valor) {
+        if (tamanho < dados.length) {
+            fim = (fim + 1) % dados.length;
+            dados[fim] = valor;
+            tamanho++;
+        } else {
+            System.out.println("Fila cheia");
+        }
+    }
+
+    public int dequeue() {
+        if (!isEmpty()) {
+            int valor = dados[inicio];
+            inicio = (inicio + 1) % dados.length;
+            tamanho--;
+            return valor;
+        } else {
+            System.out.println("Fila vazia");
+            return -1;
+        }
+    }
+
+    public int peek() {
+        if (!isEmpty()) {
+            return dados[inicio];
+        } else {
+            System.out.println("Fila vazia");
+            return -1;
+        }
+    }
+
+    public boolean isEmpty() {
+        return tamanho == 0;
+    }
+
+    public static void main(String[] args) {
+        Fila f = new Fila(5);
+
+        f.enqueue(10);
+        f.enqueue(20);
+        f.enqueue(30);
+
+        System.out.println("Primeiro da fila: " + f.peek());
+
+        while (!f.isEmpty()) {
+            System.out.println("Removido: " + f.dequeue());
+        }
+    }
+}

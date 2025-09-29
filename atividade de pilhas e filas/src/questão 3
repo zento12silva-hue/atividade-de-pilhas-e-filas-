@@ -1,0 +1,8 @@
+
+1 Sempre que houver uma tarefa prioritária, ela será executada antes de todas as outras, porque está no topo da pilha.  
+
+2 Depois de esvaziar a pilha, voltam a ser executadas as tarefas da fila, na ordem de chegada.
+
+Isso acontece porque:
+A fila garante a ordem cronológica normal (primeiro que entra, primeiro que sai).
+A pilha dá prioridade para as tarefas mais urgentes, resolvendo-as imediatamente.

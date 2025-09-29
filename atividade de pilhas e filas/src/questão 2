@@ -1,0 +1,8 @@
+O hospital precisa imprimir os exames em ordem inversa à que foram feitos.  
+Isso quer dizer que o último exame realizado deve ser o primeiro a ser impresso.
+
+R= Nesse caso, a estrutura ideal é a Pilha, pois ela permite retirar os elementos na ordem contrária à inserção.
+Eu usaria lista encadeada ao invés de array, porque:
+A quantidade de exames pode variar muito.
+Com a lista encadeada não há necessidade de definir um tamanho fixo de armazenamento.
+Inserções e remoções no topo da pilha são simples e rápidas.
